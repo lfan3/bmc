@@ -1,0 +1,120 @@
+{
+  "name": "sbc",
+  "version": "0.0.1",
+  "description": "A react library developed with dumi",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "start": "npm run dev",
+    "dev": "dumi dev",
+    "build": "father build",
+    "build:watch": "father dev",
+    "docs:build": "dumi build",
+    "prepare": "husky install && dumi setup",
+    "doctor": "father doctor",
+    "lint": "npm run lint:es && npm run lint:css",
+    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
+    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "prepublishOnly": "father doctor && npm run build"
+  },
+  "authors": [],
+  "license": "MIT",
+  "files": [
+    "dist"
+  ],
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "lint-staged": {
+    "*.{md,json}": [
+      "prettier --write --no-error-on-unmatched-pattern"
+    ],
+    "*.{css,less}": [
+      "stylelint --fix",
+      "prettier --write"
+    ],
+    "*.{js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{ts,tsx}": [
+      "eslint --fix",
+      "prettier --parser=typescript --write"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "react": ">=16.9.0",
+    "react-dom": ">=16.9.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.1.2",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@umijs/lint": "^4.0.0",
+    "dumi": "^2.2.0",
+    "eslint": "^8.23.0",
+    "father": "^4.1.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-organize-imports": "^3.0.0",
+    "prettier-plugin-packagejson": "^2.2.18",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "stylelint": "^14.9.1"
+  },
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@ant-design/pro-components": "^2.6.7",
+    "@ant-design/pro-layout": "^6.38.4",
+    "@ant-design/pro-provider": "1.10.0",
+    "@ant-design/pro-utils": "1.45.3",
+    "@babel/runtime": "^7.18.0",
+    "@designable/core": "^1.0.0-beta.45",
+    "@designable/formily-transformer": "^1.0.0-beta.45",
+    "@designable/react": "^1.0.0-beta.45",
+    "@designable/react-settings-form": "^1.0.0-beta.45",
+    "@formily/antd": "^2.1.9",
+    "@formily/core": "^2.1.9",
+    "@formily/react": "^2.1.9",
+    "@formily/reactive": "^2.1.9",
+    "@formily/shared": "^2.1.9",
+    "@umijs/route-utils": "^2.1.0",
+    "@umijs/ssr-darkreader": "^4.9.44",
+    "@umijs/use-params": "^1.0.9",
+    "ahooks": "^3.3.0",
+    "bizcharts": "^4.1.19",
+    "bluebird": "^3.7.2",
+    "braft-editor": "^2.3.9",
+    "braft-extensions": "^0.1.1",
+    "chance": "^1.1.8",
+    "classnames": "^2.2.6",
+    "echarts": "^5.3.3",
+    "lodash": "^4.17.21",
+    "lodash.debounce": "^4.0.8",
+    "lodash.get": "^4.4.2",
+    "lodash.merge": "^4.6.2",
+    "moment": "^2.29.1",
+    "moveto": "^1.8.2",
+    "nanoid": "^4.0.0",
+    "omit.js": "^2.0.2",
+    "pascal-case": "^3.1.2",
+    "pro-layout": "^0.0.38",
+    "prop-types": "^15.5.8",
+    "rc-resize-observer": "^1.1.0",
+    "rc-tween-one": "^3.0.6",
+    "rc-util": "^5.0.6",
+    "react-addons-update": "^15.6.3",
+    "swr": "^1.2.0",
+    "umi-request": "^1.4.0",
+    "unstated-next": "^1.1.0",
+    "use-json-comparison": "^1.0.3",
+    "use-media-antd-query": "^1.1.0"
+  }
+}
