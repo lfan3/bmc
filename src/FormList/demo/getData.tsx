@@ -19,7 +19,7 @@ function generateComplexSource(row: number) {
       name: { xxx: `Quotation for 1PCS Nano ${3 + i}.0 controller compatible` },
       phone: i,
       time: 2000 + i,
-      email: `${100306660940 + i}@alibaba-inc.com`,
+      email: `${100306660940 + i}@gamil.com`,
       actions: [
         {
           type: 'openLink',

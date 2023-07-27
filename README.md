@@ -1,7 +1,10 @@
-# sbc
+# bmc
 
 [![NPM version](https://img.shields.io/npm/v/sbc.svg?style=flat)](https://npmjs.org/package/sbc)
 [![NPM downloads](http://img.shields.io/npm/dm/sbc.svg?style=flat)](https://npmjs.org/package/sbc)
+
+# purpos
+build some common used template page for creating backend management platform based on Ant-design
 
 A react library developed with dumi
 
